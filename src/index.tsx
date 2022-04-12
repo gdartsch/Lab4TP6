@@ -3,10 +3,11 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import AppRutas from './AppRutas';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <AppRutas />
   </React.StrictMode>,
   document.getElementById('root')
 );

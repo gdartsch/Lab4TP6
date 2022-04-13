@@ -19,6 +19,7 @@ export const ItemInstrumento = (args : InstrumentoParams) => {
 
     return (
         <>
+            <br></br><br></br>
             <Card style={{ width: '18rem' }} className="margenesTarjeta"> 
             <Card.Img variant="top" className="maxAltoImg" src={"http://localhost:3000/img/"+args.imagen.toLowerCase()} />
             <Card.Body>
@@ -35,6 +36,7 @@ export const ItemInstrumento = (args : InstrumentoParams) => {
                 <Button href={`detalle/${args.id}`} variant="primary">Detalle</Button>
             </Card.Body>
             </Card>
+            <br></br><br></br><br></br><br></br>
         </>
     )
 }

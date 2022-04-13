@@ -5,15 +5,15 @@ export const Navigation = () => {
     return (
         <>
             <Navbar bg="primary" variant="dark">
-              <Navbar.Brand href="/home">INICIO</Navbar.Brand>
+              <Navbar.Brand href="/homePosta">HOME</Navbar.Brand>
               <Nav className="mr-auto">
-                <Nav.Link href="/">Home</Nav.Link>
-                <Nav.Link href="/ciclovida">Ciclo de Vida</Nav.Link>
+                <Nav.Link href="/dondeEstamos">Donde Estamos</Nav.Link>
+                <br></br>
+                <Nav.Link href="/">Productos</Nav.Link>
+                <br></br>
+                <br></br>
+                <br></br>        
               </Nav>
-              <Form>
-                <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-                <Button variant="outline-light">Search</Button>
-              </Form>
             </Navbar>
         </>
     )

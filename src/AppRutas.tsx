@@ -5,6 +5,8 @@ import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import { Home } from './componentes/Home';
 import { DetalleInstrumento } from './componentes/DetalleInstrumento';
 import App from './App';
+import { HomePosta } from './componentes/HomePosta';
+import { DondeEstamos } from './componentes/DondeEstamos';
 
 
 class AppRutas extends Component{
@@ -17,6 +19,8 @@ class AppRutas extends Component{
             <Route path="/detalle">
               <Route path=":idinstrumento" element={<DetalleInstrumento />} />
             </Route>
+            <Route path="/homePosta" element={<HomePosta/>}/>
+            <Route path="/dondeEstamos" element={<DondeEstamos/>}/>
             <Route path="/test" element={<h1>TEST</h1>}/>
             <Route path="*" element={<Home/>}/>
           </Routes>

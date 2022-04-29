@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 
 import { useParams } from 'react-router-dom';
-import { getInstrumentoPorId as getInstrumentoPorId } from './FuncionesApi';
+import { getInstrumentosPorIdFetch } from './FuncionesApi';
 import { Navigation } from './Navigation';
 import Instrumento from './Instrumento';
 import { Col, Container, ListGroup, Nav, Row } from 'react-bootstrap';
@@ -14,8 +14,9 @@ export const DetalleInstrumento = () => {
     
     let instrumentoId:number = 0;
     
-    const getInstrumento = () => {
-      let instrumentoSelect:Instrumento = getInstrumentoPorId(instrumentoId);
+    const getInstrumento = async () => {
+      let instrumentoSelect:Instrumento = 
+        await getInstrumentosPorIdFetch(Number(instrumentoId));
       setInstrumento(instrumentoSelect);
     }
 
@@ -38,7 +39,7 @@ export const DetalleInstrumento = () => {
                             <Col><h3>{instrumento?.cantidadVendida}</h3></Col>
                         </Row>
                         <Row>
-                            <Col><h1>{instrumento?.instrumento}</h1></Col>
+                            <Col><h1>{instrumento?.nombre}</h1></Col>
                         </Row>
                         <Row>
                         <Col><h2>${instrumento?.precio}</h2></Col>

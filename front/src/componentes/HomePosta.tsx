@@ -1,6 +1,4 @@
 import { useEffect, useState } from 'react';
-
-import { getPlatosJSON as getInstrumentosJSON, getInstrumentoPorId } from './FuncionesApi';
 import { ItemInstrumento } from './ItemInstrumento';
 import { Navigation } from './Navigation';
 import Instrumento from './Instrumento';

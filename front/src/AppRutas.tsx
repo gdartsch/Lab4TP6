@@ -4,7 +4,6 @@ import './App.css';
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import { Home } from './componentes/Home';
 import { DetalleInstrumento } from './componentes/DetalleInstrumento';
-import App from './App';
 import { HomePosta } from './componentes/HomePosta';
 import { DondeEstamos } from './componentes/DondeEstamos';
 

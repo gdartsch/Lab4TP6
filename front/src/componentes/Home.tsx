@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-import { getPlatosJSON as getInstrumentosJSON, getInstrumentoPorId } from './FuncionesApi';
+import { getInstrumentosJSONFetch } from './FuncionesApi';
 import { ItemInstrumento } from './ItemInstrumento';
 import { Navigation } from './Navigation';
 import Instrumento from './Instrumento';
@@ -11,8 +11,8 @@ export const Home = () => {
     
   const [instrumentos, setInstrumentos] = useState<Instrumento[]>([]);
     
-    const getInstrumentos = () => {
-      let datos:Instrumento[] = getInstrumentosJSON();
+    const getInstrumentos = async () => {
+      let datos:Instrumento[] = await getInstrumentosJSONFetch();
       setInstrumentos(datos);
     }
 
@@ -30,7 +30,7 @@ export const Home = () => {
                 <ItemInstrumento 
                   key={instrumento.id} 
                   id={instrumento.id} 
-                  instrumento={instrumento.instrumento}
+                  instrumento={instrumento.nombre}
                   marca={instrumento.marca}
                   modelo={instrumento.modelo}
                   imagen={instrumento.imagen}

@@ -1,4 +1,6 @@
 const router = require('express').Router();
+const Sequelize = require('sequelize');
+const Op = Sequelize.Op;
 
 const { Instrumento } = require('../../db');
 
@@ -9,6 +11,17 @@ router.get('/', async (req, res) => {
 
 router.get('/:id', async (req, res) => {
     const instrumento = await Instrumento.findByPk(req.params.id);
+    res.json(instrumento);
+});
+
+router.get('/busqueda/:nombre', async (req, res) => {
+    const instrumento = await Instrumento.findOne({
+        where: {
+            nombre: {
+                [Op.like]: `%${req.params.nombre}%`
+            }
+        }
+    });
     res.json(instrumento);
 });
 

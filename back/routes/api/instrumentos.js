@@ -15,7 +15,7 @@ router.get('/:id', async (req, res) => {
 });
 
 router.get('/busqueda/:nombre', async (req, res) => {
-    const instrumento = await Instrumento.findOne({
+    const instrumento = await Instrumento.findAll({
         where: {
             nombre: {
                 [Op.like]: `%${req.params.nombre}%`

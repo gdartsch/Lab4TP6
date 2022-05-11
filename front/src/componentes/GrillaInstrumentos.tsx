@@ -51,19 +51,10 @@ export const GrillaInstrumentos = () => {
                 <Col md={2}>
                 <b>Precio</b>
                 </Col>
-                <Col md={2}>
-                <b>Costo Envío</b>
-                </Col>
-                <Col md={2}>
-                <b>Cantidad Vendida</b>
-                </Col>
-                <Col md={2}>
-                <b>Descripción</b>
-                </Col>
-                <Col md={2}>
+                <Col md={1}>
                 <b>Modificar</b>
                 </Col>
-                <Col md={2}>
+                <Col md={1}>
                 <b>Eliminar</b>
                 </Col>
             </Row>
@@ -84,19 +75,10 @@ export const GrillaInstrumentos = () => {
                 <Col md={2}>
                 {instrumento.precio}
                 </Col>
-                <Col md={2}>
-                {instrumento.costoEnvio}
-                </Col>
-                <Col md={2}>
-                {instrumento.cantidadVendida}
-                </Col>
-                <Col md={2}>
-                {instrumento.descripcion}
-                </Col>
-                <Col md={2}>
+                <Col md={1}>
                 <Button variant="outline-warning" href={`/formulario/` + instrumento.id}>Modificar</Button>
                 </Col>
-                <Col md={2}>
+                <Col md={1}>
                 <Button variant="outline-danger" onClick={(e) => deleteInstrumento(instrumento.id)}>Eliminar</Button>
                 </Col>
             </Row>

@@ -36,7 +36,7 @@ export const DetalleInstrumento = () => {
                     <Col><br/><img alt="instrumento" className="minAltoImg" src={"http://localhost:3000/img/"+instrumento?.imagen}  /></Col>
                     <Col>
                         <Row>
-                            <Col><h3>{instrumento?.cantidadVendida}</h3></Col>
+                            <Col><h3>Cantidad vendida: {instrumento?.cantidadVendida}</h3></Col>
                         </Row>
                         <Row>
                             <Col><h1>{instrumento?.nombre}</h1></Col>
